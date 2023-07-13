@@ -10,3 +10,11 @@ class Reservation(models.Model):
 
     def __str__(self):
         return self.name
+class Employee(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    role = models.CharField(max_length=100)
+    shift = models.IntegerField()
+
+    def __str__(self):
+        return self.first_name
